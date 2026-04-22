@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - Prime Rewards Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .check-icon {
+            font-size: 50px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+        h1 { font-weight: 700; font-size: 26px; color: #fff; margin-bottom: 15px; }
+        p { color: #aaa; line-height: 1.6; font-size: 15px; margin-bottom: 20px; }
+        .highlight { color: #ffd700; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="check-icon">✓</div>
+        <h1>Registration Successful!</h1>
+        <p>Your application for the giveaway has been completed successfully.</p>
+        <p>Please follow our social media platforms to stay updated on the results. <span class="highlight">If you win, we will contact you via your email address.</span></p>
+        <div style="margin-top: 30px; font-size: 12px; color: #444;">PRIME REWARDS HUB • 2026</div>
+    </div>
+</body>
+</html>
+2. Ana Sayfayı Güncelle (index.html)
+Ana sayfadaki formun hata vermemesi ve az önce hazırladığımız sayfaya yönlendirmesi için bu kodu kullanmalısın.
+
+Not: Formspree bazen direkt e-mail yazınca hata verebilir. Eğer yine "Not Found" alırsan Formspree.io sitesine üye olup oluşturduğun formun "ID"sini (8 haneli karışık harfler) e-mail yazdığımız yere koyman gerekir.
+
+HTML
+<form action="https://formspree.io/f/mqaebrko" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    
+    <input type="hidden" name="_next" value="https://KULLANICIADIN.github.io/REPOSTORY-ISMIN/success.html">
+    
+    <button type="submit">Join Giveaway</button>
+</form>
